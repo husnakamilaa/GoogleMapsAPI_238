@@ -29,7 +29,19 @@ class _HomePageState extends State<HomePage> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          
+                          const Text("Pilih Alamat"),
+                          IconButton(
+                            icon: const Icon(Icons.map, color: Colors.blue),
+                            onPressed: () async {
+                              final result = await Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const MapPage(),
+                                ),
+                              );
+                              
+                            },
+                          ),
                         ],
                       ),
                     ],

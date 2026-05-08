@@ -141,17 +141,17 @@ class _MapPageState extends State<MapPage> {
               markers: _pickedMarker != null ? {_pickedMarker!} : {},
               onTap: _onTap,
             ),
-            Positioned(
-              top: 250,
-              left: 56,
-              child: Padding(
-                padding: const EdgeInsets.all(12),
-                child: Text(
-                  _pickedAddress!,
-                  style: const TextStyle(fontSize: 12),
-                ),
-              ),
-            ),
+            // Positioned(
+            //   top: 250,
+            //   left: 56,
+            //   child: Padding(
+            //     padding: const EdgeInsets.all(12),
+            //     child: Text(
+            //       _pickedAddress!,
+            //       style: const TextStyle(fontSize: 12),
+            //     ),
+            //   ),
+            // ),
             if (_pickedAddress != null)
               Positioned(
                 bottom: 120,
@@ -186,7 +186,7 @@ class _MapPageState extends State<MapPage> {
               onPressed: () {
                 setState(() {
                   _pickedAddress = null;
-                  _pickedAddress = null;
+                  _pickedMarker = null;
                 });
               },
               heroTag: 'clear',
